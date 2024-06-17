@@ -40,7 +40,7 @@ df_percentiles['Fouls'] = 100 - df_percentiles['Fouls']
 df_percentiles['Errors'] = 100 - df_percentiles['Errors']
 
 # Select a player
-player_name = "Takehiro Tomiyasu"
+player_name = "Quentin Merlin"
 values = df_percentiles[df_percentiles['Player'] == player_name][params].values.flatten()
 values = [round(val) for val in values]
 
@@ -95,7 +95,7 @@ fig.text(
 # add subtitle
 fig.text(
     0.5, 0.945,
-    f"Season 2023-24 | {df[df["Player"] == player_name]["90s"].values[0]} Games Played",
+    f"2023-24 | {df[df["Player"] == player_name]["90s"].values[0]} Games Played | {round(df[df["Player"] == player_name]["Age"].values[0])} years old",
     size=13,
     ha="center", fontproperties=font_bold.prop, color="#F2F2F2"
 )
